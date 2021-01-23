@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <title>Create Blog</title>
+  </head>
+  <body>
+
+    <div class='container'>
+        <div class='row'>
+            <div class='col-md-12'>
+              <h1 class='mb-4'> <%= article.title %> </h1>
+              <div class='text-muted mb-2'>
+                  <%= article.createdAt.toLocaleDateString() %>
+              </div>
+              <a href='/' class='btn btn-secondary'>All Articles</a>
+              <a href='/article/edit/<%= article.id %>' class='btn btn-info'>Edit</a>
+              </div>
+              <div class='col-md-12' style='margin-top:20px;'>
+                <%- article.sanitizedHtml %>
+              </div>
+        </div>
+    </div>
+  </body>
+</html>

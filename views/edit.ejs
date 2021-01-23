@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <title>Create Blog</title>
+  </head>
+  <body>
+
+    <div class='container'>
+        <div class='row'>
+            <div class='col-md-12'>
+              <h1 class='mb-4'>Edit Article</h1>
+              </div>
+              <div class='col-md-12' style='margin-top:20px;'>
+                <form action='/article/<%= article.id %>/?_method=PUT' method='post'>
+                  <%- include('_form_fields') %>
+                </form>
+              </div>
+        </div>
+    </div>
+  </body>
+</html>
